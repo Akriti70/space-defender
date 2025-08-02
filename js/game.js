@@ -50,6 +50,8 @@ class Game {
     if (this.enemySpawnTimer >= this.enemySpawnInterval) {
       this.enemies.push(new Enemy(this.canvas));
       this.enemySpawnTimer = 0;
+explosionSound.play();
+
     }
 
     // Update player and draw
@@ -169,3 +171,5 @@ class Game {
     this.gameLoop();
   }
 }
+const explosionSound = new Audio("assets/sounds/609588__unfa__firecracker-explosion.flac");
+
