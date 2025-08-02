@@ -1,1 +1,132 @@
 
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: black;
+  color: white;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; 
+}
+
+/* Screens */
+.screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.active-screen {
+  display: flex;
+}
+
+/* Start Screen */
+#start-screen {
+  background: url("assets/images/ai-generated-8723801.png") no-repeat center center;
+  background-size: cover;
+  text-align: center;
+}
+
+/* Start Screen Heading Animation */
+#start-screen h1 {
+  padding-top: 30px;
+  font-size: 11rem;
+  margin-bottom: 30px;
+  color: aquamarine;
+  margin-top: 40px;
+ 
+ 
+ 
+}
+
+/* Start Button */
+#start-button {
+  font-size: 1.5rem;
+  padding: 12px 40px;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  background-color: #0f7;
+  color: black;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+
+.pulse-button {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  background-color: #111;
+  color: white;
+  border: 2px solid #00f;
+  border-radius: 8px;
+  cursor: pointer;
+  animation: pulse 1.5s infinite;
+  transition: all 0.3s ease;
+}
+
+/* Button Hover Effect */
+#start-button:hover,
+.pulse-button:hover {
+  background-color: #00f;
+  color: white;
+  transform: scale(1.15);
+}
+
+/* Game Screen */
+#game-canvas {
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  background-color: #111;
+  border: 2px solid white;
+  background: url("assets/images/kim-sung-jin-wBekuj9ylLU-unsplash.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+/* Overlay for End Message */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Game Over or Win Message */
+#status-message {
+  font-size: 4rem;
+  text-align: center;
+}
+
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}

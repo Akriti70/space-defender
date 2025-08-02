@@ -1,1 +1,39 @@
-"Add index.html"
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Space Defender</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Start Screen -->
+  <div id="start-screen" class="screen active-screen">
+    <h1>Space Defender</h1>
+    <button id="start-button" class="pulse-button">Start Game</button>
+    <canvas id="bg-stars"></canvas>
+  </div>
+
+  <!-- Game Screen -->
+  <div id="game-screen" class="screen">
+    <canvas id="game-canvas" width="600" height="400"></canvas>
+  </div>
+
+  <!-- End Message Overlay (No restart button) -->
+  <div id="end-message-overlay" class="overlay" style="display:none;">
+    <h1 id="status-message"></h1>
+  </div>
+
+  <!-- Game Scripts -->
+  <script src="js/player.js"></script>
+  <script src="js/Laser.js"></script>
+  <script src="js/enemy.js"></script>
+  <script src="js/explosion.js"></script>
+  <script src="js/game.js"></script>
+  <script src="js/projectile.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
