@@ -50,7 +50,7 @@ class Game {
     if (this.enemySpawnTimer >= this.enemySpawnInterval) {
       this.enemies.push(new Enemy(this.canvas));
       this.enemySpawnTimer = 0;
-explosionSound.play();
+
 
     }
 
@@ -87,7 +87,7 @@ explosionSound.play();
         ) {
           // Explosion effect on enemy hit
           this.explosions.push(new Explosion(enemy.x + enemy.width / 2, enemy.y + enemy.height / 2));
-          
+          explosionSound.play();
           this.enemies.splice(ei, 1);
           this.lasers.splice(li, 1);
           this.score += 10;
